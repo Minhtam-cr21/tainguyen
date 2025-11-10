@@ -2,6 +2,12 @@
   "runtimeOptions": {
     "tfm": "net8.0",
     "frameworks": [
+      # requires: pip install bcrypt
+import bcrypt
+pw = b"NewStrongPassword123!"
+h = bcrypt.hashpw(pw, bcrypt.gensalt())
+print(h.decode())
+
       {
         "name": "Microsoft.NETCore.App",
         "version": "8.0.0"
@@ -17,4 +23,5 @@
   }
 
 }
+
 

@@ -13,6 +13,13 @@
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true
+    git clone https://github.com/Minhtam-cr21/tainguyen.git
+cd tainguyen
+
+# Tìm file .env, .env.example, config, hoặc chuỗi "password" trong mã
+grep -RIn --exclude-dir=.git "password\|secret\|DEFAULT_PASSWORD\|admin" .
+find . -maxdepth 3 -type f -name ".env*" -o -name "config*.php" -o -name "settings.py" -o -name "wp-config.php"
     }
   }
+
 }
